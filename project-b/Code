@@ -7,11 +7,13 @@ function preload() {
   //img = loadImage("briefcase.jpg");
   img2 = loadImage("cell phone.png")
   img3 = loadImage("revolutionarywar.gif")
+  //textSize(50)
 }
 function setup() {
   createCanvas(700, 600);
   man = new stickman(200, 200);
   bgColor = 220;
+  textSize(30)
   //canvas.parent("p5-canvas-container");
 }
 
@@ -90,6 +92,27 @@ function draw(){//this is the draw loop, create other objects here
     //fill(0,100,0)
     //rect()
   }
+  if(mouseIsPressed) {
+    fill(252, 252, 3)
+    text("time to go to sleep!",350,300)}//w key
+    else{
+    fill(0,0,0)
+    text("time to go to work", 350,300)
+  }
+  if(mouseIsPressed==true){
+    text("war",random(0,700),random(0,600))
+    text("famine",random(0,700),random(0,600))
+    text("fear",random(0,700),random(0,600))
+    text("conflict",random(0,700),random(0,700))
+  }
+  if(mouseIsPressed==true){
+    fill(255,0,0)
+    text("it doesn't matter to me", 300,100)
+  }
+  //if(keyTyped==true){
+    //fill(0,0,0)
+    //text("I live in peace")
+  //}
 }//end of draw loop
 
 
@@ -142,3 +165,5 @@ class stickman {//custom function
     this.t += 0.08;
   }//end of show loop
 }//end of stickman loop
+//add instructions or explanation/text on screen
+//show image when a button is clicked
